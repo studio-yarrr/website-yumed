@@ -1,0 +1,279 @@
+.masters {
+  margin-bottom: 20rem;
+  position: relative;
+
+  @include breakpoint(1024px) {
+    margin-bottom: 10rem;
+  }
+
+  &__bubbles {
+    bottom: -15rem;
+
+    .bubbles__item {
+      &:nth-child(1) {
+        &::after {
+          left: -10rem;
+          top: 5rem;
+          right: unset;
+
+          @include breakpoint(500px) {
+            width: 20rem;
+            height: 20rem;
+            top: 10rem;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        &::after {
+          left: 20rem;
+          right: unset;
+          top: 10rem;
+
+          @include breakpoint(500px) {
+            width: 10rem;
+            height: 10rem;
+            top: 20rem;
+            left: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 56rem 1fr;
+    gap: 2rem;
+
+    @include breakpoint(1024px) {
+      grid-template-columns: repeat(2, calc(50% - 1rem));
+    }
+
+    @include breakpoint(500px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 3rem;
+
+    @include breakpoint(500px) {
+      gap: 0rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: auto;
+  }
+
+  &-info {
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint(500px) {
+      display: none;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+      // background-color: $white;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s;
+
+      &.swiper-slide-active {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .masters-item {
+        &__img {
+          display: none;
+        }
+
+        &__info {
+          height: 100%;
+          display: flex;
+        }
+
+        &__btn {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
+  &-swiper {
+    width: calc(100% + 10rem);
+    padding-right: 10rem;
+    margin-right: -10rem;
+    height: 75rem;
+    overflow: hidden;
+    pointer-events: none;
+
+    @include breakpoint(1024px) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      height: 50rem;
+    }
+
+    @include breakpoint(500px) {
+      height: unset;
+      pointer-events: all;
+    }
+
+    .swiper-slide {
+      width: 52rem;
+      height: 100%;
+      padding-right: 2rem;
+
+      @include breakpoint(1024px) {
+        padding: 0;
+        width: 100%;
+      }
+
+      &.swiper-slide-active {
+        .masters-item__img {
+          height: 100%;
+          width: 100%;
+          border-radius: 0 20rem;
+          transform: translateX(0) !important;
+
+          @include breakpoint(500px) {
+            border-radius: 0 8rem;
+            height: 50rem;
+          }
+        }
+      }
+
+      &.swiper-slide-next {
+        .masters-item__img {
+          transform: translateX(0) !important;
+        }
+
+        & + .swiper-slide + .swiper-slide {
+          .masters-item__img {
+            transform: translateX(-44rem);
+
+            @include breakpoint(1024px) {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include breakpoint(500px) {
+      justify-content: flex-start;
+    }
+
+    &__img {
+      flex: none;
+      width: 28rem;
+      height: 39rem;
+      overflow: hidden;
+      position: relative;
+      transition: 0.5s;
+      transform: translateX(-22rem);
+
+      @include breakpoint(1024px) {
+        transform: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 20rem;
+      }
+
+      @include breakpoint(500px) {
+        border-radius: 0 8rem;
+        height: 50rem;
+        margin-bottom: 4rem;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      display: none;
+
+      @include breakpoint(500px) {
+        display: flex;
+      }
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.016rem;
+
+      @include breakpoint(1024px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &__text {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 2.8rem */
+      letter-spacing: 0.01rem;
+      @include text;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+
+      @include breakpoint(1024px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &-nav {
+    @include breakpoint(500px) {
+      position: relative;
+      z-index: 100;
+      transform: translateY(calc(50rem + 110%));
+    }
+  }
+}

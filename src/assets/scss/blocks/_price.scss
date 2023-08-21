@@ -1,0 +1,114 @@
+.price {
+  margin-bottom: 20rem;
+
+  @include breakpoint(1024px) {
+    margin-bottom: 10rem;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &-nav {
+    width: calc(100% + 4rem);
+    margin: 0rem -2rem 4rem;
+    padding: 0rem 2rem;
+
+    @include breakpoint(500px) {
+      margin-bottom: 3rem;
+    }
+
+    .swiper-slide {
+      padding-right: 4rem;
+      width: fit-content;
+      cursor: pointer;
+
+      @include breakpoint(1024px) {
+        padding-right: 1.5rem;
+      }
+
+      &.swiper-slide-thumb-active {
+        pointer-events: none;
+
+        .price-nav__item {
+          border-color: $green;
+        }
+      }
+    }
+
+    &__item {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 2.8rem */
+      letter-spacing: 0.01rem;
+      padding: 1rem 1rem 0.8rem 1rem;
+      border-bottom: 0.2rem solid transparent;
+      white-space: nowrap;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        padding: 0.5rem 0.7rem 0.3rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &-swiper {
+    max-width: 85rem;
+    margin: 0rem auto 0rem 0rem;
+
+    .swiper-slide {
+      background-color: $white;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include breakpoint(500px) {
+      gap: 3rem;
+    }
+
+    &__text {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 2.8rem */
+      letter-spacing: 0.01rem;
+      @include text;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+
+      @include breakpoint(1024px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      @include breakpoint(500px) {
+        gap: 2rem;
+      }
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.012rem;
+
+      @include breakpoint(1024px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,470 @@
+.header {
+  position: sticky;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 2rem 0 1.9rem;
+    border-bottom: 0.1rem solid rgba(195, 195, 195, 1);
+
+    @include breakpoint(1024px) {
+      padding: 1rem 0rem 1rem;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+    height: 5rem;
+
+    @include breakpoint(1024px) {
+      width: 7.1rem;
+      height: 3rem;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex: none;
+
+    @include breakpoint(1024px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 100%);
+      opacity: 0;
+      pointer-events: none;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem 2rem 4rem;
+      overflow: auto;
+      transition: 0.3s;
+      background-color: $white;
+
+      &._active {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    .header-info {
+      display: none;
+
+      @include breakpoint(1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: auto;
+
+        .header-info__text {
+          display: inline-block;
+        }
+
+        .header-info__phone {
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 0.009rem;
+          color: $green;
+          width: fit-content;
+          height: fit-content;
+
+          svg {
+            display: none;
+          }
+        }
+
+        .header-info__call-btn {
+          display: inline-block;
+        }
+
+        .header__menu-btn {
+          display: none;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.009rem;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+
+    @include breakpoint(1024px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      svg {
+        stroke: $green;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.007rem;
+      color: rgba(35, 35, 35, 0.5);
+
+      @include breakpoint(1024px) {
+        display: none;
+      }
+    }
+
+    &__phone {
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.009rem;
+      color: $green;
+      width: fit-content;
+      height: fit-content;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      svg {
+        display: none;
+
+        @include breakpoint(1024px) {
+          display: block;
+        }
+      }
+    }
+
+    &__call-btn {
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.96rem */
+      letter-spacing: 0.007rem;
+      text-decoration-line: underline;
+      color: $green;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+
+    @include breakpoint(1024px) {
+      display: flex;
+
+      &._active {
+        svg {
+          &:nth-child(1) {
+            opacity: 0;
+            transform: scale(0);
+          }
+          &:nth-child(2) {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  }
+
+  &-drop {
+    &._active {
+      .header-drop__btn svg {
+        transform: scale(1);
+      }
+
+      .header-drop__bg {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .header-drop__container {
+        opacity: 1;
+        pointer-events: all;
+
+        @include breakpoint(1024px) {
+          grid-template-rows: 1fr;
+        }
+
+        .swiper {
+          .swiper-slide {
+            pointer-events: all;
+          }
+        }
+      }
+
+      .header-drop-nav {
+        @include breakpoint(1024px) {
+          padding: 2rem 1rem 0rem;
+        }
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 100%);
+      background-color: rgba(35, 35, 35, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        display: none;
+      }
+    }
+
+    &__swiper {
+      width: 100%;
+      height: 100%;
+      padding: 3rem 3rem 10rem 3rem;
+      opacity: 0;
+      pointer-events: none;
+      background-color: $white;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        display: none;
+      }
+
+      &._show {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .swiper-slide {
+        width: 34rem;
+        background-color: $white;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      svg {
+        width: 1.4rem;
+        height: 1em;
+        stroke: $green;
+        transform: scale(-1);
+      }
+    }
+
+    &__container {
+      position: absolute;
+      top: 100%;
+      max-height: calc(100vh - 100%);
+      overflow: auto;
+      display: grid;
+      grid-template-columns: 40rem 40rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        position: static;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        max-height: unset;
+      }
+
+      .swiper {
+        .swiper-slide {
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-nav {
+      flex: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      padding: 3rem 0rem 3rem 3rem;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        min-height: 0;
+        padding: 0rem 1rem;
+        gap: 1.5rem;
+      }
+
+      &-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        @include breakpoint(1024px) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &._active {
+          .header-drop-nav-item__btn {
+            padding: 0.35rem 0rem 0.35rem 1rem;
+
+            &::before {
+              opacity: 1;
+            }
+          }
+
+          .header-drop-nav-item__container {
+            @include breakpoint(1024px) {
+              grid-template-rows: 1fr;
+            }
+          }
+
+          .header-drop-nav-item__content {
+            padding: 1.5rem 1rem 0rem;
+          }
+        }
+
+        &__btn {
+          width: fit-content;
+          height: fit-content;
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          letter-spacing: 0.01rem;
+          padding: 0.35rem 0rem;
+          transition: 0.3s;
+          position: relative;
+
+          @include breakpoint(1024px) {
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 2.24rem */
+            letter-spacing: 0.008rem;
+          }
+
+          &::before {
+            content: "";
+            border-left: 0.2rem solid $green;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+          }
+        }
+
+        &__container {
+          display: none;
+
+          @include breakpoint(1024px) {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: 0.3s;
+            overflow: hidden;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+          width: 30rem;
+
+          @include breakpoint(1024px) {
+            width: 100%;
+            min-height: 0;
+            padding: 0rem 1rem;
+            gap: 1rem;
+            transition: 0.3s;
+          }
+        }
+
+        &__link {
+          font-size: 2rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          letter-spacing: 0.01rem;
+
+          @include breakpoint(1024px) {
+            font-size: 1.6rem;
+            letter-spacing: 0.008;
+          }
+        }
+      }
+    }
+  }
+}

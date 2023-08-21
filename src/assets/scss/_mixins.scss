@@ -1,0 +1,30 @@
+@mixin breakpoint($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin text {
+  & >,
+  * > {
+    * {
+      font-size: inherit;
+      line-height: inherit;
+      font-family: inherit;
+      color: inherit;
+
+      :not(strong) {
+        font-weight: inherit;
+      }
+    }
+
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    color: inherit;
+
+    :not(strong) {
+      font-weight: inherit;
+    }
+  }
+}

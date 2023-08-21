@@ -1,0 +1,40 @@
+.reviews-all {
+  margin-bottom: 20rem;
+
+  @include breakpoint(1024px) {
+    margin-bottom: 10rem;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @include breakpoint(500px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .reviews-item {
+    height: 60rem;
+
+    @include breakpoint(1024px) {
+      height: 32rem;
+    }
+
+    @include breakpoint(500px) {
+      height: 45rem;
+    }
+
+    &::after {
+      @include breakpoint(1024px) {
+        border-width: 3rem;
+      }
+    }
+  }
+}

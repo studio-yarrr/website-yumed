@@ -1,0 +1,50 @@
+@import "vendor/reset";
+
+@import "./vars";
+@import "./mixins";
+@import "./fonts";
+@import "./general";
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+
+  @include breakpoint(1024px) {
+    font-size: calc(100vw / 1024 * 10);
+  }
+
+  @include breakpoint(500px) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+svg {
+  transition: 0.3s;
+}
+
+@import "./blocks/header";
+@import "./blocks/footer";
+
+@import "./blocks/masters";
+@import "./blocks/our-works";
+@import "./blocks/reviews";
+@import "./blocks/main-form";
+@import "./blocks/licenses";
+
+@import "./blocks/modal-form";
+
+@import "./blocks/main";
+@import "./blocks/services";
+@import "./blocks/service";
+@import "./blocks/price";
+@import "./blocks/about";
+@import "./blocks/specialists";
+@import "./blocks/stocks";
+@import "./blocks/reviews-all";
+@import "./blocks/contacts";

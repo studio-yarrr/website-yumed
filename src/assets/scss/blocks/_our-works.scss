@@ -1,0 +1,249 @@
+.our-works {
+  position: relative;
+  margin-bottom: 20rem;
+  width: 100%;
+
+  @include breakpoint(1024px) {
+    margin-bottom: 10rem;
+  }
+
+  &__line {
+    top: -15rem;
+
+    @include breakpoint(1024px) {
+      top: 0;
+    }
+
+    @include breakpoint(500px) {
+      top: unset;
+      bottom: 5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    @include breakpoint(1024px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include breakpoint(500px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 4rem;
+
+    @include breakpoint(500px) {
+      gap: 2rem;
+    }
+  }
+
+  &-photo {
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+    @include breakpoint(500px) {
+      pointer-events: all;
+    }
+
+    .swiper-wrapper {
+      @include breakpoint(500px) {
+        align-items: stretch;
+      }
+    }
+
+    .swiper-slide {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: 0.5s;
+
+      @include breakpoint(500px) {
+        height: auto;
+      }
+
+      &.swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-item {
+    @include breakpoint(500px) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      height: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      height: 54rem;
+      border-radius: 0 20rem;
+      overflow: hidden;
+
+      @include breakpoint(1024px) {
+        height: 50rem;
+      }
+
+      @include breakpoint(500px) {
+        height: 21.2rem;
+        border-radius: 0 8rem;
+        flex: none;
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      display: none;
+
+      @include breakpoint(1024px) {
+        gap: 2rem;
+      }
+
+      @include breakpoint(500px) {
+        display: flex;
+        flex: 1;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+
+      @include breakpoint(1024px) {
+        gap: 1rem;
+      }
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.012rem;
+
+      @include breakpoint(1024px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__text {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 2.8rem */
+      letter-spacing: 0.01rem;
+
+      @include breakpoint(1024px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__link {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 2.8rem */
+      letter-spacing: 0.01rem;
+      text-decoration-line: underline;
+      transition: 0.3s;
+
+      @include breakpoint(1024px) {
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint(500px) {
+        margin-top: auto;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+
+    &-info {
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      &__current {
+        font-size: 4.8rem;
+        letter-spacing: 0.024rem;
+
+        &::after {
+          content: "/";
+        }
+      }
+
+      &__all {
+        font-size: 2.4rem;
+        letter-spacing: 0.012rem;
+        color: rgba(35, 35, 35, 0.5);
+      }
+    }
+  }
+
+  &-info {
+    width: 100%;
+
+    @include breakpoint(500px) {
+      display: none;
+    }
+
+    .swiper-slide {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: 0.5s;
+
+      &.swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .our-works-item__img {
+        display: none;
+      }
+
+      .our-works-item__inner {
+        display: flex;
+      }
+    }
+  }
+}

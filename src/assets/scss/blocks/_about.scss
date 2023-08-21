@@ -1,0 +1,147 @@
+.about {
+  .main-about__container {
+    grid-template-rows: auto 1fr;
+  }
+
+  .main-about__title {
+    grid-area: 1/1/2/2;
+    height: fit-content;
+    margin: 0;
+  }
+
+  .main-about__inner {
+    justify-content: flex-start;
+  }
+
+  .main-about__img {
+    grid-area: 1/2/3/3;
+  }
+
+  &-advantages {
+    margin-bottom: 20rem;
+    position: relative;
+
+    @include breakpoint(500px) {
+      margin-bottom: 10rem;
+    }
+
+    &__line {
+      top: -12.8rem;
+
+      @include breakpoint(1024px) {
+        top: -5rem;
+      }
+
+      @include breakpoint(500px) {
+        top: 5rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+
+      @include breakpoint(500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      min-height: 44.2rem;
+      overflow: hidden;
+      border-radius: 0 20rem;
+      position: relative;
+
+      @include breakpoint(500px) {
+        height: 18rem;
+        min-height: unset;
+        border-radius: 0 8rem;
+      }
+
+      img {
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 42.5rem;
+      gap: 3rem;
+
+      @include breakpoint(500px) {
+        gap: 1.5rem;
+        max-width: 100%;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.25rem;
+      position: relative;
+      padding: 0.75rem 0 0 2.8rem;
+
+      @include breakpoint(500px) {
+        padding: 0.35rem 0rem 0rem 2.2rem;
+        gap: 0.85rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        opacity: 0.05;
+        background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #069492 100%);
+
+        @include breakpoint(1024px) {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+
+      &__title {
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.012rem;
+
+        @include breakpoint(1024px) {
+          font-size: 1.8rem;
+        }
+      }
+
+      &__text {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 2.8rem */
+        letter-spacing: 0.01rem;
+
+        @include breakpoint(1024px) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
