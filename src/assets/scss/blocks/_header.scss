@@ -254,8 +254,15 @@
         }
 
         .swiper {
-          .swiper-slide {
+          &._show {
             pointer-events: all;
+            opacity: 1;
+          }
+
+          .swiper-slide {
+            &.swiper-slide-active {
+              pointer-events: all;
+            }
           }
         }
       }
@@ -294,11 +301,6 @@
 
       @include breakpoint(1024px) {
         display: none;
-      }
-
-      &._show {
-        opacity: 1;
-        pointer-events: all;
       }
 
       .swiper-slide {

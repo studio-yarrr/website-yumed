@@ -1136,7 +1136,12 @@ svg {
     }
 }
 
-.header-drop._active .header-drop__container .swiper .swiper-slide {
+.header-drop._active .header-drop__container .swiper._show {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.header-drop._active .header-drop__container .swiper .swiper-slide.swiper-slide-active {
     pointer-events: all;
 }
 
@@ -1178,11 +1183,6 @@ svg {
     .header-drop__swiper {
         display: none;
     }
-}
-
-.header-drop__swiper._show {
-    opacity: 1;
-    pointer-events: all;
 }
 
 .header-drop__swiper .swiper-slide {

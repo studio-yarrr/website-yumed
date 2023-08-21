@@ -73,6 +73,7 @@ class HeadeDropController {
   init() {
     this.dropBtn.addEventListener("click", this.openHandler.bind(this));
     this.bg.addEventListener("click", this.close.bind(this));
+    this.bg.addEventListener("mouseenter", this.close.bind(this));
 
     this.navItems.forEach(item => {
       const newSlide = document.createElement("div");
@@ -81,7 +82,8 @@ class HeadeDropController {
 
       this.swiper.appendSlide(newSlide);
 
-      item.btn.addEventListener("click", this.navItemClickHandler.bind(this, item));
+      // item.btn.addEventListener("click", this.navItemClickHandler.bind(this, item));
+      item.btn.addEventListener("mouseenter", this.navItemClickHandler.bind(this, item));
     })
   }
 
