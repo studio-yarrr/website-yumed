@@ -21,7 +21,12 @@
   }
 
   &__nav {
+    display: none;
     flex: none;
+
+    @include breakpoint(1024px) {
+      display: flex;
+    }
 
     @include breakpoint(500px) {
       position: absolute;
