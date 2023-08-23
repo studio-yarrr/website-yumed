@@ -169,6 +169,10 @@
         color: transparent;
         width: 2.4rem;
         height: 2.4rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       &:hover {
@@ -176,10 +180,12 @@
       }
 
       svg {
+        flex: none;
         display: none;
 
         @include breakpoint(1024px) {
           display: block;
+          position: absolute;
         }
       }
     }

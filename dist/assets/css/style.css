@@ -1041,6 +1041,13 @@ svg {
         color: transparent;
         width: 2.4rem;
         height: 2.4rem;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
@@ -1049,12 +1056,15 @@ svg {
 }
 
 .header-info__phone svg {
+    -ms-flex: none;
+    flex: none;
     display: none;
 }
 
 @media (max-width: 1024px) {
     .header-info__phone svg {
         display: block;
+        position: absolute;
     }
 }
 
