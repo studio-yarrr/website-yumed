@@ -17,6 +17,7 @@
       gap: 3rem;
       border-radius: 0rem 20rem;
       background: linear-gradient(90deg, rgb(192, 198, 204) 0%, rgb(208, 215, 222) 59.6%, rgb(192, 198, 204) 100%);
+      overflow: hidden;
 
       @include breakpoint(1024px) {
         height: 50rem;

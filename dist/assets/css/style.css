@@ -854,6 +854,12 @@ svg {
     }
 }
 
+@media (max-width: 500px) {
+    .header__container {
+        border-color: transparent;
+    }
+}
+
 .header__logo {
     width: 12rem;
     height: 5rem;
@@ -3048,6 +3054,7 @@ svg {
     gap: 3rem;
     border-radius: 0rem 20rem;
     background: linear-gradient(90deg, rgb(192, 198, 204) 0%, rgb(208, 215, 222) 59.6%, rgb(192, 198, 204) 100%);
+    overflow: hidden;
 }
 
 @media (max-width: 1024px) {

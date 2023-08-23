@@ -18,6 +18,10 @@
     @include breakpoint(1024px) {
       padding: 1rem 0rem 1rem;
     }
+
+    @include breakpoint(500px) {
+      border-color: transparent;
+    }
   }
 
   &__logo {
