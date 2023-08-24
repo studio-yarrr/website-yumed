@@ -2,7 +2,10 @@
   "name": "template",
   "version": "1.0.0",
   "description": "",
-  "author": "DevMinrat",
+  "author": "Solovei Aliksandr",
+  "scripts": {
+    "build": "gulp build"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
