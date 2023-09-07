@@ -3650,6 +3650,123 @@ svg {
     }
 }
 
+.service-procedure {
+    width: 100%;
+    margin-bottom: 30.6rem;
+}
+
+@media (max-width: 1024px) {
+    .service-procedure {
+        margin-bottom: 10rem;
+    }
+}
+
+.service-procedure__wrapper {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (max-width: 500px) {
+    .service-procedure__wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.service-procedure__description {
+    width: 87rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .service-procedure__description {
+        gap: 3rem;
+        width: 100%;
+    }
+}
+
+.service-procedure__text {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.005em;
+}
+
+@media (max-width: 1024px) {
+    .service-procedure__text {
+        font-size: 1.6rem;
+    }
+}
+
+.service-procedure__video {
+    width: 85rem;
+    height: 48rem;
+}
+
+@media (max-width: 1024px) {
+    .service-procedure__video {
+        width: 100%;
+    }
+}
+
+.service-procedure__video .procedure-item {
+    width: 85rem;
+    height: 48rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-procedure__video .procedure-item:hover::before {
+    opacity: 0;
+}
+
+.service-procedure__video .procedure-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.service-procedure__video .procedure-item__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+.service-procedure__video .procedure-item__img img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.service-procedure__video .procedure-item[data-video]::after {
+    content: "";
+    border: 6rem solid transparent;
+    border-left-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-25%) translateY(-50%);
+    transform: translateX(-25%) translateY(-50%);
+}
+
 .services {
     margin-bottom: 20rem;
     position: relative;
