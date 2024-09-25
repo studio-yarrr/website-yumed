@@ -4,7 +4,9 @@
   "description": "",
   "author": "Solovei Aliksandr",
   "scripts": {
-    "build": "gulp buildNMin"
+    "buildNMin": "gulp buildNMin",
+    "build": "gulp build",
+    "start": "gulp dev"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
