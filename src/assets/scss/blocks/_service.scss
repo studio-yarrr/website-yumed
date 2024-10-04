@@ -408,15 +408,22 @@
       gap: 1rem;
 
       &__item {
-        display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0rem 2rem 0.8rem;
         border-bottom: 0.2rem solid rgba(195, 195, 195, 1);
         gap: 1.5rem;
+        display: grid;
+        grid-template-columns: 13.6rem 1fr 12rem;
 
         @include breakpoint(1024px) {
           padding: 0rem 1rem 0.8rem;
+        }
+
+        @media (max-width: 500px) {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
 
@@ -430,6 +437,10 @@
         @include breakpoint(1024px) {
           font-size: 1.6rem;
         }
+
+        &.code {
+          font-weight: 500;
+        }
       }
 
       &__value {
@@ -440,6 +451,7 @@
         letter-spacing: 0.016rem;
         flex: none;
         color: $green;
+        margin-left: auto;
 
         @include breakpoint(1024px) {
           font-size: 2.4rem;

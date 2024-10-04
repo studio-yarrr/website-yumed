@@ -105,9 +105,22 @@
       font-weight: 600;
       line-height: normal;
       letter-spacing: 0.012rem;
+      display: grid;
+      grid-template-columns: 15rem 1fr max-content;
+      padding: 0 1rem .8rem;
 
       @include breakpoint(1024px) {
         font-size: 1.8rem;
+      }
+
+      @media (max-width: 500px) {
+        display: flex;
+        span{
+          display: none;
+        }
+        .show-on-mobile{
+          display: block;
+        }
       }
     }
   }

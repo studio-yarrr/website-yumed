@@ -1,396 +1,459 @@
 <div class="page-nav">
-  <div class="container">
-    <div class="page-nav__container">
-      <a href="#" class="page-nav__link">
-        Главная
-        <svg>
-          <use href="#drop-arrow-icon"></use>
-        </svg>
-      </a>
-      <a href="#" class="page-nav__link">
-        Цены
-        <svg>
-          <use href="#drop-arrow-icon"></use>
-        </svg>
-      </a>
+    <div class="container">
+        <div class="page-nav__container">
+            <a href="#" class="page-nav__link">
+                Главная
+                <svg>
+                    <use href="#drop-arrow-icon"></use>
+                </svg>
+            </a>
+            <a href="#" class="page-nav__link">
+                Цены
+                <svg>
+                    <use href="#drop-arrow-icon"></use>
+                </svg>
+            </a>
+        </div>
     </div>
-  </div>
 </div>
 
 <section class="price">
-  <div class="container">
-    <h1 class="page-title price__title">Цены</h1>
+    <div class="container">
+        <h1 class="page-title price__title">Цены</h1>
 
-    <div class="price__container">
+        <div class="price__container">
 
-      <div class="swiper price-nav">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="price-nav__item">
-              Эстетическая косметология
+            <div class="swiper price-nav">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="price-nav__item">
+                            Эстетическая косметология
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="price-nav__item">
+                            Инъекционная косметология
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="price-nav__item">
+                            Аппаратная косметология
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="price-nav__item">
+                            Удаление новообразований
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="price-nav__item">
-              Инъекционная косметология
+
+            <div class="swiper price-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="price-item">
+                            <div class="price-item__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis
+                                    parturient montes
+                                    nascetur ridiculus mus mauris.
+                                </p>
+                            </div>
+
+                            <!-- Переделанная таблица. Сделал гридом, не хотел полность переписывать через <table>
+                                 На код оставил место ровно под эту длину white-space'м их не обрезать, т.е. если
+                                 планируется сделать чуть больше нужно длинну столбца увеличить в стилях,
+                                 аналагично с ценной, но я там сделал карман до 7 знаков в надежде
+                                 что до миллионов цены не дойдут.-->
+                            <div class="price-item__inner">
+                                <div class="price-item__title">
+                                    <span>
+                                        Код услуги
+                                    </span>
+                                    <span class="show-on-mobile">
+                                        Консультация врача
+                                    </span>
+                                    <span>
+                                        Цена,руб.
+                                    </span>
+                                </div>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Консультация врача-косметолога,
+                                            дерматоловенеролога</span>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Консультация врача дерматоловенеролога
+                                            (повторная)</span>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А</span>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А. (повторная)</span>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <div class="price-item__title">
+                                    <span>
+                                        Код услуги
+                                    </span>
+                                    <span class="show-on-mobile">
+                                        Пиллинги
+                                    </span>
+                                    <span>
+                                        Цена,руб.
+                                    </span>
+                                </div>
+
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Пиллинги</span>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Пиллинги</span>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Отпиллинги</span>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Снова Пиллинги</span>
+                                        <span class="service-info-price__value">5 000 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <div class="price-item__title">
+                                    <span>
+                                        Код услуги
+                                    </span>
+                                    <span class="show-on-mobile">
+                                        Чистка лица
+                                    </span>
+                                    <span>
+                                        Цена,руб.
+                                    </span>
+                                </div>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Чистка</span>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Очень чистка</span>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Чистка</span>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title code">B01.008.003</h6>
+                                        <span class="service-info-price__title">Отчистка</span>
+                                        <span class="service-info-price__value">5 000 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Уходовые процедуры</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="price-item">
+                            <div class="price-item__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis
+                                    parturient montes
+                                    nascetur ridiculus mus mauris.
+                                </p>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Консультация врача</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация врача-косметолога,
+                                            дерматоловенеролога</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация врача дерматоловенеролога
+                                            (повторная)</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А.</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А. (повторная)</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Пилинги</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Чистка лица</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="price-item">
+                            <div class="price-item__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis
+                                    parturient montes
+                                    nascetur ridiculus mus mauris.
+                                </p>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Консультация врача</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация врача-косметолога,
+                                            дерматоловенеролога</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация врача дерматоловенеролога
+                                            (повторная)</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А.</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А. (повторная)</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Уходовые процедуры</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="price-item">
+                            <div class="price-item__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis
+                                    parturient montes
+                                    nascetur ridiculus mus mauris.
+                                </p>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Консультация врача</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация врача-косметолога,
+                                            дерматоловенеролога</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация врача дерматоловенеролога
+                                            (повторная)</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А.</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Консультация глав врача, пластического
+                                            хирурга, дерматолога,
+                                            косметолога Масловской Ю. А. (повторная)</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Чистка лица</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-item__inner">
+                                <h4 class="price-item__title">Уходовые процедуры</h4>
+                                <div class="service-info-price">
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">1 000 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">3 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                    <div class="service-info-price__item">
+                                        <h6 class="service-info-price__title">Пилинги</h6>
+                                        <span class="service-info-price__value">2 500 р</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="price-nav__item">
-              Аппаратная косметология
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="price-nav__item">
-              Удаление новообразований
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div class="swiper price-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="price-item">
-              <div class="price-item__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis parturient montes
-                  nascetur ridiculus mus mauris.
-                </p>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Консультация врача</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача-косметолога, дерматоловенеролога</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача дерматоловенеролога (повторная)</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А.</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А. (повторная)</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Пилинги</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Чистка лица</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Уходовые процедуры</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="price-item">
-              <div class="price-item__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis parturient montes
-                  nascetur ridiculus mus mauris.
-                </p>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Консультация врача</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача-косметолога, дерматоловенеролога</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача дерматоловенеролога (повторная)</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А.</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А. (повторная)</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Пилинги</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Чистка лица</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="price-item">
-              <div class="price-item__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis parturient montes
-                  nascetur ridiculus mus mauris.
-                </p>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Консультация врача</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача-косметолога, дерматоловенеролога</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача дерматоловенеролога (повторная)</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А.</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А. (повторная)</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Уходовые процедуры</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="price-item">
-              <div class="price-item__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Enim diam vulputate ut pharetra sit amet aliquam. Magnis dis parturient montes
-                  nascetur ridiculus mus mauris.
-                </p>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Консультация врача</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача-косметолога, дерматоловенеролога</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация врача дерматоловенеролога (повторная)</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А.</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Консультация глав врача, пластического хирурга, дерматолога,
-                      косметолога Масловской Ю. А. (повторная)</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Чистка лица</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-              <div class="price-item__inner">
-                <h4 class="price-item__title">Уходовые процедуры</h4>
-                <div class="service-info-price">
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">1 000 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">3 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                  <div class="service-info-price__item">
-                    <h6 class="service-info-price__title">Пилинги</h6>
-                    <span class="service-info-price__value">2 500 р</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 {{> _main-form }}
