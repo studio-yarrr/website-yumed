@@ -414,7 +414,7 @@
         border-bottom: 0.2rem solid rgba(195, 195, 195, 1);
         gap: 1.5rem;
         display: grid;
-        grid-template-columns: 13.6rem 1fr 12rem;
+        grid-template-columns: 13.6rem 1fr 15rem;
 
         @include breakpoint(1024px) {
           padding: 0rem 1rem 0.8rem;
