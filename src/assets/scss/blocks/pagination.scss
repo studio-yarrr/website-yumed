@@ -37,6 +37,12 @@
       align-items: center;
       border-radius: 50%;
       border: 0.1rem solid $green;
+      user-select: none;
+
+      &:hover{
+        cursor: pointer;
+        background-color: rgba(59, 153, 119, 0.1);
+      }
 
       @media (max-width: 500px) {
         width: 2.6rem;
