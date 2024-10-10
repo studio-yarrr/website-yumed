@@ -1,0 +1,41 @@
+.pagination-block{
+  display: flex;
+  margin: 0 auto;
+  gap: 0.8rem;
+  padding-bottom: 3.5rem;
+
+  .previous__button, .next__button{
+    display: flex;
+    height: 3.2rem;
+    width: 8rem;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+      cursor: pointer;
+      color: #3B9977;
+    }
+  }
+
+  .pages-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    .page-number{
+      width: 3.2rem;
+      height: 3.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 0.1rem solid $green;
+
+      &.active{
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+}

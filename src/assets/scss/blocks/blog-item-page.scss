@@ -1,4 +1,17 @@
 .blog-item-page {
+
+  h3 {
+    padding: 1.9rem 0;
+  }
+
+  h4 {
+    padding: 1.5rem 0;
+  }
+
+  h5 {
+    padding: 1rem 0;
+  }
+
   .blog-item-page-container {
 
     .image-block {
@@ -22,6 +35,15 @@
       gap: 2.8rem;
       font-size: 1.5rem;
       line-height: 2.1rem;
+
+      a {
+        color: #069492;
+
+        &:hover {
+          cursor: pointer;
+          color: #057875;
+        }
+      }
 
       @media (max-width: 500px) {
         display: flex;
@@ -80,33 +102,78 @@
           margin-top: 3.2rem;
           font-size: 1.5rem;
           padding-left: 2rem;
+        }
 
-          @media (max-width: 500px) {
+        @media (max-width: 500px) {
+          .main-list {
             font-size: 1.2rem;
             margin-top: 1.8rem;
           }
+        }
 
-          ol {
-            list-style-type: decimal;
-            margin-left: 20px;
-            margin-top: 0.8rem;
-            @media (max-width: 500px) {
-              margin-top: 0.4rem;
-            }
-          }
+        .main-list ol {
+          list-style-type: decimal;
+          margin-left: 20px;
+          margin-top: 0.8rem;
+        }
 
-          li {
-            margin-bottom: 10px;
-            list-style-type: decimal;
+        @media (max-width: 500px) {
+          .main-list ol {
+            margin-top: 0.4rem;
           }
+        }
+
+        .main-list ul {
+          list-style-type: disc;
+          margin-left: 20px;
+          margin-top: 0.8rem;
+        }
+
+        @media (max-width: 500px) {
+          .main-list ul {
+            margin-top: 0.4rem;
+          }
+        }
+
+        .main-list li {
+          margin-bottom: 10px;
         }
       }
     }
   }
 
   .popular-states-block {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
     margin-bottom: 14rem;
     margin-top: 3.8rem;
+
+    .popular-states-list {
+      width: 100%;
+      height: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #069492;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+
+      &.swiper-button-disabled{
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      right: 1.5rem;
+    }
+
+    .swiper-button-prev {
+      left: 1.5rem;
+    }
 
     .title {
       font-weight: 600;

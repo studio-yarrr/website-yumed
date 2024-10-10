@@ -106,12 +106,20 @@
 
         <div class="popular-states-block">
             <div class="title">Популярные статьи:</div>
-            <div class="popular-states-list">
-                {{#repeat 4}}
-                {{> _blog-item }}
-                {{/repeat}}
+            <div class="popular-states-list swiper-container">
+                <div class="swiper-wrapper">
+                    {{#repeat 7}}
+                    <div class="swiper-slide">
+                        {{> _blog-item }}
+                    </div>
+                    {{/repeat}}
+                </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
 
     </div>
 </section>
+
+{{> _pagination }}

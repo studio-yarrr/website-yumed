@@ -469,3 +469,23 @@ if (modalForm) {
     btn.addEventListener("click", () => modal.open());
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const swiperContainer = document.querySelector('.popular-states-list');
+
+  if (swiperContainer.querySelector('.swiper-slide')) {
+    const swiper = new Swiper(swiperContainer, {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        500: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  }
+});
