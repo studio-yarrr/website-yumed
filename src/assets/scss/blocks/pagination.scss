@@ -11,6 +11,12 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 500px) {
+      width: 5rem;
+      height: 2.6rem;
+      font-size: 1.2rem;
+    }
+
     &:hover{
       cursor: pointer;
       color: #3B9977;
@@ -31,6 +37,12 @@
       align-items: center;
       border-radius: 50%;
       border: 0.1rem solid $green;
+
+      @media (max-width: 500px) {
+        width: 2.6rem;
+        height: 2.6rem;
+        font-size: 1.2rem;
+      }
 
       &.active{
         background-color: $green;
